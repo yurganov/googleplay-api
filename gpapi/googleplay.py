@@ -605,7 +605,6 @@ class GooglePlayAPI(object):
                   'doc': packageName,
                   'vc': str(versionCode)}
         self.log(packageName)
-        print ("HERE")
         response = requests.post(PURCHASE_URL, headers=headers,
                                  params=params, verify=ssl_verify,
                                  timeout=60,
