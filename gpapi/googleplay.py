@@ -610,6 +610,8 @@ class GooglePlayAPI(object):
                                  timeout=60,
                                  proxies=self.proxies_config)
 
+        print "HERE"
+
         response = googleplay_pb2.ResponseWrapper.FromString(response.content)
         if response.commands.displayErrorMessage != "":
             raise RequestError(response.commands.displayErrorMessage)
