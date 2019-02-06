@@ -610,7 +610,8 @@ class GooglePlayAPI(object):
                                  timeout=60,
                                  proxies=self.proxies_config)
 
-        print "HERE"
+        print ("HERE")
+        print (PURCHASE_URL)
 
         response = googleplay_pb2.ResponseWrapper.FromString(response.content)
         if response.commands.displayErrorMessage != "":
